@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      body{
+          background-color: #562397;
+      }
+      h1, p {
+          color: white;
+      }
+
+    .circles{
+        background-color: #ce8b2d;
+        border-radius: 50%;
+        position: fixed;
+        width: 10rem;
+        height: 10rem;
+        margin-top: 5rem;
+        animation-name: topdown;
+        animation-duration: 3s;
+        animation-iteration-count:infinite ;
+    }
+    .circle{
+        background-color: #45737f;
+        border-radius: 50%;
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        margin-left: 25rem;
+        animation-name: circleball;
+        animation-duration: 4s;
+        animation-iteration-count:infinite ;
+    }
+      .cir1{
+          left: 15rem;
+          animation-timing-function: cubic-bezier(0.25, 0.82, 0.165, 0.9);
+      }
+      .cir2 {
+          left: 55rem;
+          animation-timing-function: ease-in-out;
+          background-color: aquamarine;
+      }
+      .cir3{
+          right: 30rem;
+          animation-timing-function: cubic-bezier(1, 0, 0, 1);
+          animation-delay: 0.2s;
+      }
+      .cir4{
+          background-color: aliceblue;
+          animation-timing-function: ease-in;
+          animation-direction: reverse;
+      }
+      @keyframes topdown{
+          0% {
+              top: 5rem;
+          }
+          25%{
+              left: 20rem;
+              animation-fill-mode: backwards;
+              border: 5px solid black;
+          }
+          50%{
+              translate: 3s;
+              float: right;
+            
+          }
+          100%{
+              top: 35rem;
+              float: left 5rem;
+          }
+      }
+      @keyframes circleball{
+          0% {
+              top: 5rem;
+              transform: rotate(185deg);
+              
+          }
+          25%{
+              transform: scale(2);
+              transition: step-start;
+              border-radius: 15px 2rem 55px;
+          }
+          50%{
+              background-color: crimson;
+              border: 5px solid white;
+              right: 21rem;
+          }
+          75%{
+             animation-duration: 1s;
+             background-color: deepskyblue;
+             font-size: larger;
+             font-weight: 700;
+          }
+          100%{
+              top: 35rem;
+              transform: rotateZ(100deg);
+              background-color: yellow;
+              transform: skew(2);
+          }
+      }
+      h2 {
+          color: white;
+          animation-name: moveany;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          text-shadow: #45737f red violet;
+          font-weight: 900;
+      }
+      @keyframes moveany{
+          0%{
+              top: 5rem;
+              color:#0dc8f0;
+          }
+          50%{
+              transform: rotate(360deg);
+              color: red;
+              font-size: 10rem;
+        }
+        100%{
+            top: 38rem;
+        }
+      }
+  </style>
+
+</head>
+<body>
+   <h1 style="font-family: sans-serif; text-align: center; ">Austin' Challenge of Sunday, April 3rd</h1>
+      <p style="font-family: sans-serif; text-align: center; ">
+        Animation in HTML & CSS</p> 
+        <div class="circles cir1"> 
+            <span style="color: white; font-size:  3re; margin-bottom: 1rem;">Circle 1</span></div>
+        <div class="circles cir2" ><span  style="color: white; font-size:  3re; margin-bottom: 1rem;">Circle 2</span></div>
+        <div class="circle cir3"> 
+            <span style="color: white; font-size:  3re; margin-bottom: 1rem;">Circle 3</span></div>
+        <div class="circle cir4" ><span  style="color: white; font-size:  3re; margin-bottom: 1rem;">Circle 4</span></div>
+        <h2 class="move">ANYTHING CAN MOVE and TRANSFORM</h2>
+</body>
+</html>
